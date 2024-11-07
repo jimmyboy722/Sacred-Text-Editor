@@ -1,7 +1,7 @@
 {
   "name": "JATE",
   "scripts": {
-    "dev": "webpack-dev-server",
+    "start:dev": "concurrently \"cd server && npm run server\" \"cd client && npm run dev\"",
     "build": "webpack --mode production",
     "start": "webpack --watch"
   },
