@@ -19,6 +19,7 @@ module.exports = () => {
       filename: "[name].bundle.js",
       path: path.resolve(__dirname, "dist"),
     },
+    // PLUGINS FOR SERVICE WORKER AND MANIFEST FILE
     plugins: [
       new HtmlWebpackPlugin({
         template: "./index.html",
@@ -33,6 +34,7 @@ module.exports = () => {
     module: {
       rules: [
         {
+          // ** ADDING BABEL LOADER **
           test: /\.m?js$/,
           exclude: /node_modules/,
           use: {
